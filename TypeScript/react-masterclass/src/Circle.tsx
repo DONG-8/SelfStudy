@@ -18,7 +18,10 @@ interface CircleProps{
   text ?: string;
 }
 function Circle({bgColor, borderColor, text ="default text"} : CircleProps) {
-  const [counter, setCounter] = useState(1)
+  const [counter, setCounter] = useState<number|string>(1)
+  setCounter(2)
+  setCounter("아잉")
+  // setCounter(true)
 	return <Container bgColor={bgColor} borderColor={borderColor ?? "white"}>{text}</Container>
 }
 
